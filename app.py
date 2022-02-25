@@ -24,7 +24,7 @@ async def predict(name): # name of the process
         result = 'male'
     return {"orig_name" : name,"prediction":result}
 
-if __name__ == '__main__':
+if __name__ == '__main__': #it will run in 127.0.0.1:8000
     uvicorn.run(app,host="127.0.0.1",port=8000)
 
 #check the documents for implementation 
