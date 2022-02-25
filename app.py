@@ -6,7 +6,7 @@ gender_vectorizer = open("models/gender_vectorizer.pkl","rb")
 gender_cv = joblib.load(gender_vectorizer)
 # joblib is to provide lightweight pipelining.
 gender_nv_model = open("models/gender_nv_model.pkl","rb")
-#will open gender nv model, that will predict the name's gender.
+#will open gender nv model, that will predict the name's gender. check point(2) for content
 gender_clf = joblib.load(gender_nv_model)
 
 app = FastAPI()
@@ -26,3 +26,5 @@ async def predict(name): # name of the process
 
 if __name__ == '__main__':
     uvicorn.run(app,host="127.0.0.1",port=8000)
+
+#check the documents for implementation 
